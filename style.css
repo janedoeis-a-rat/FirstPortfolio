@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navbar Section */
+label #button,
+label #close{
+    color: white;
+    font-size: 30px;
+    color: transparent;
+}
+#check{
+    display: none;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 20px 0px;
+}
+.navbar ul li{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1,1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 30px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 640px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('bg1.jpeg') no-repeat center center/cover;
+    height: 700px;
+    width: 100%;
+    z-index: -1;
+    opacity: .7;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    margin: 10px 0px;
+}
+.headings{
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+.head{
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* About Section */
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.headings1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 30px 0px;
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 575px;
+    height: 400px;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Learning Section */
+#learn{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+.headings2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 10px 0px;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+.box{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    border: 1px solid white;
+    margin: 10px;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgb(255,255,0) 50%, black 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+.box:hover{
+    background-position: left bottom;
+    color: black;
+    border: none;
+    box-shadow: 0 0 20px rgb(255,255,0);
+}
+.box img{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 20px 0px;
+}
+.box p{
+    margin-top: 10px;
+}
+
+/* Contact Section */
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+.input{
+    padding: 15px;
+    margin: 10px;
+    width: 30%;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+}
+#comment{
+    padding: 15px;
+    width: 30%;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 10%;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    transition: all .3s ease;
+}
+#send:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
+}
+
+@media (max-width: 800px){
+    /* About */
+    #pic{
+        flex-direction: column;
+        align-items: center;
+    }
+    #pic img{
+        width: 450px;
+        height: 300px;
+    }
+    #intro h2{
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    /* Contact */
+    .input{
+        width: 40%;
+    }
+    #comment{
+        width: 40%;
+    }
+    #send{
+        width: 20%;
+    }
+}
+
+@media (max-width: 600px){
+    /* Home */
+    .headings{
+        font-size: 2.3rem;
+    }
+
+    /* About */
+    .headings1{
+        font-size: 2.5rem;
+    }
+    #pic img{
+        width: 350px;
+        height: 250px;
+    }
+    #intro{
+        font-size: 15px;
+    }
+
+    /* Learning */
+    .row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        width: 400px;
+        height: 500px;
+        margin: 15px 0px;
+    }
+}
