@@ -196,7 +196,7 @@ label #close{
     color: white;
 }
 #comment{
-    padding: 15px;
+    padding: 10px;
     width: 30%;
     margin: 10px;
     background-color: black;
@@ -275,5 +275,46 @@ label #close{
         width: 400px;
         height: 500px;
         margin: 15px 0px;
+    }
+}
+
+@media (max-width: 469px){
+    /* Navbar */
+    .navbar{
+        display: flex;
+    }
+    .navbar{
+        align-items: center;
+    }
+    .navbar ul li a{
+        display: flex;
+        text-align: center;
+    }
+
+    /* Home */
+    .headings{
+        font-size: 1.9rem;
+    }
+    #home{
+        height: 575px;
+    }
+    #home::before{
+        height: 650px;
+    }
+
+    /* Learning */
+    .box{
+        width: 380px;
+    }
+
+    /* Contact */
+    .input{
+        width: 60%;
+    }
+    #comment{
+        width: 60%;
+    }
+    #send{
+        width: 30%;
     }
 }
