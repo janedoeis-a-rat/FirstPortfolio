@@ -282,8 +282,6 @@ label #close{
     /* Navbar */
     .navbar{
         display: flex;
-    }
-    .navbar{
         align-items: center;
     }
     .navbar ul li a{
